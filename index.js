@@ -1,13 +1,12 @@
-//Load express module with `require` directive
-var express = require('express')
-var app = express()
+const express = require('express');
+const app = express();
+const port = 8080;
 
-//Define request response in root URL (/)
+// Define the static file path
+app.use(express.static(__dirname+'/images'));
+
 app.get('/', function (req, res) {
-  res.send('Hello World!')
+  res.sendFile(__dirname + '/index.html');
 })
 
-//Launch listening server on port 8080
-app.listen(8080, function () {
-  console.log('app listening on port 8080!')
-})
+app.listen(port, () => console.log('The server running on Port '+port));
