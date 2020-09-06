@@ -1,4 +1,4 @@
 ---
 aws_access_key: AKIAJVSTBBL4XSSAORUA
-aws_secret_key: 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
+aws_secret_key: boum9L71VUM5uDRGixXd
 ansible_ssh_private_key: "/home/ubuntu/.ssh/mykeypair.pem"
